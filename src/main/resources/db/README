@@ -1,0 +1,7 @@
+This directory contains the SQL required to create the DB schema that is used by the project.
+
+The 'creation' directory contains the script required to create the underlying database.
+The 'migration' directory contains the scrips required to create the underlying database schema.
+
+If you wanted to use flyway to manage your database migrations, you would point it to the 'migration' directory.
+Otherwise, it is expected that you have run this SQL against your database before running the application.

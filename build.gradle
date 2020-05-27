@@ -1,0 +1,38 @@
+plugins {
+    id 'org.springframework.boot' version '2.3.0.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'java'
+}
+
+group = 'com.ligerlearn'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '14'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly "org.projectlombok:lombok:1.18.12"
+    annotationProcessor "org.projectlombok:lombok:1.18.12"
+
+    // Dependencies with versions defined by the spring dependency management plugin.
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation "org.postgresql:postgresql"
+
+    // We need the API and reference implementation (RI) for dealing with XML.
+    implementation  "javax.xml.ws:jaxws-api:2.3.1"
+    implementation "com.sun.xml.ws:jaxws-ri:2.3.2"
+
+    // Add swagger UI to http://localhost:8080/swagger-ui/index.html
+    implementation "org.springdoc:springdoc-openapi-ui:1.2.29"
+
+
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+}
+
+test {
+    useJUnitPlatform()
+}
