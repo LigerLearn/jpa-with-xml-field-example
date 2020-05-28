@@ -71,9 +71,9 @@ public class Person implements Serializable {
         ModelJaxBContext jaxbContext = ModelJaxBContext.getInstance();
 
         // We need to convert the address to an XML document string and set the string representation.
-        addressAsXmlString = jaxbContext.marshallPojoToXmlString(Address.class, address);
+        this.addressAsXmlString = jaxbContext.marshallPojoToXmlString(Address.class, address);
 
-        log.info("Set the address xml string representation to: {}", addressAsXmlString);
+        log.info("Set the address xml string representation to: {}", this.addressAsXmlString);
 
         // Set the POJO version, too.
         this.address = address;

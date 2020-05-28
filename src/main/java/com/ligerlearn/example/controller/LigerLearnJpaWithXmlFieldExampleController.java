@@ -15,7 +15,6 @@ public class LigerLearnJpaWithXmlFieldExampleController {
 
     private final PersonRepository personRepository;
 
-
     @Autowired
     public LigerLearnJpaWithXmlFieldExampleController(PersonRepository personRepository) {
         this.personRepository = personRepository;
